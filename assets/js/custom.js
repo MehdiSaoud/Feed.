@@ -33,7 +33,16 @@ window.addEventListener("scroll", function() {
 
 // Scroll to a certain element
 function scrollToThis(id) {
-  document.getElementById(id).scrollIntoView({
-    behavior: "smooth"
-  });
+  if(id == 'story') {
+    document.getElementById(id).scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+  }
+  else {
+    document.getElementById(id).scrollIntoView({
+      behavior: "smooth",
+      block: "end"
+    });
+  }
 }
